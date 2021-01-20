@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"><!--meta标签提供了HTML 文档的元数据。 元数据不会显示在客户端，但是会被浏览器解析。 META元素通常用于指定网页的描述，关键词，文件的最后修改时间，作者及其他元数据。 总而言之<meta>标签的作用是用来告诉浏浏览器我的页面要怎么解码，怎么展示。-->
+  <meta name="author" content="HelloZzz">
+  <title>musicweb</title>
+</head>
+<body>
+  <script>
+    if (navigator.geolocation){
+      navigator.geolocation.getCurrentPosition(successCallback,errCallback);
+    }else{
+      console.log("sorry, your browser doesnt support navigator");
+    }
+    function successCallback(position){
+      var wd=position.coords.latitude;
+      var jd=position.coords.longitude;
+      console.log("successfully achieve the location");
+      console.log(wd+"--------------"+jd);
+    }
+    function errorCallback(error){
+      console.log(error)
+      console.log("failed to achieve the position")
+    }
+  </script>
+</body>
+</html>
